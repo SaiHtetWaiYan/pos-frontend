@@ -5,6 +5,7 @@ import { createPinia } from 'pinia';
 import router from '@/router'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import VueHtmlToPaper from "@/VueHtmlToPaper";
+import VueFullscreen from 'vue-fullscreen'
 
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate)
@@ -27,4 +28,4 @@ const options = {
 
 }
 
-createApp(App).use(pinia).use(router).use(VueHtmlToPaper, options).mount('#app')
+createApp(App).use(pinia).use(router).use(VueHtmlToPaper, options).use(VueFullscreen).mount('#app')
